@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Form - Way 3</title>
+</head>
+<body>
+    <h2>Fill the form</h2>
+
+    <!-- Way1 -->
+    <!--
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter your name" required><br>
+        <input type="email" name="email" placeholder="Enter your email" required><br>
+        <input type="password" name="password" placeholder="Enter your password" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    -->
+
+    <!-- Way2 -->
+    <!--
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    -->
+
+    <!-- Way3 -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
